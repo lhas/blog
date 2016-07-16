@@ -1,0 +1,47 @@
+# Header
+menu:
+  Home: /
+  # Arquivo: /archives
+  Facebook:
+    url: https://www.facebook.com/lhas666
+    icon: facebook
+  Github:
+    url: https://github.com/lhas
+    icon: github
+  Linkedin:
+    url: https://www.linkedin.com/in/luizhrqas
+    icon: linkedin
+
+# Title on top left of menu. Leave empty to use main blog title
+menu_title: 0e1dev
+
+# URL of the Home page image
+index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg
+
+# Default post title
+default_post_title: Sem título
+
+# Comments. Choose one by filling up the information
+comments:
+  # Disqus comments
+  disqus_shortname: 0e1dev
+  # Facebook comments
+  facebook:
+    appid:
+    comment_count: 5
+    comment_colorscheme: light
+
+# Google Analytics Tracking ID
+google_analytics: UA-68682771-1
+
+# Addthis ID
+addthis:
+
+# Social Accounts
+twitter_url:
+twitter_handle:
+facebook_url: https://www.facebook.com/lhas666
+github_url: https://github.com/lhas
+gitlab_url:
+linkedin_url: https://www.linkedin.com/in/luizhrqas
+mailto: luizhrqas@gmail.com
