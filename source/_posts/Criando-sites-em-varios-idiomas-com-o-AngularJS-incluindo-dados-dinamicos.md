@@ -3,7 +3,7 @@ title: Criando sites em vários idiomas com o AngularJS (incluindo dados dinâmi
 date: 2016-08-05 02:54:13
 tags: ["i18n", "multi-idiomas", "internacionalização", "angularjs", "api"]
 cover: cover.jpg
-shared_cover: /cover.jpg
+share_cover: /2016/08/05/Criando-sites-em-varios-idiomas-com-o-AngularJS-incluindo-dados-dinamicos/cover.jpg
 ---
 
 ![](cover.jpg)
@@ -242,6 +242,8 @@ Precisamos efetuar algumas configurações como:
 - Carregar as traduções de cada idioma;
 - Adaptar as strings do conteúdo do nosso site para serem mutáveis ao idioma selecionado;
 
+![](https://media.giphy.com/media/Ua48yqUY0x5uM/giphy.gif)
+
 Vamos configurar os dois primeiros itens primeiro.
 
 Para isto, vamos usar novamente o arquivo src/index.js.
@@ -289,6 +291,8 @@ angular
   }
 ```
 
+![](https://media.giphy.com/media/e5BASCeekXYoo/giphy.gif)
+
 # Configurando o conteúdo do nosso site
 
 Precisamos adaptá-lo para que ele possa interpretar as traduções definidas pela gente.
@@ -317,6 +321,8 @@ No caso, a sintaxe necessária para traduzirmos é esta:
 **translate**: é uma diretiva que nos é disponibilizada através do angular-translate. Por ser uma diretiva carregada por ele, você pode usá-la onde quiser, mesmo fora do escopo de um controller.
 
 As **chaves { { } }** significam que nós queremos dar um "output" na informação retornada pela expressão que nós definimos.
+
+![](https://media.giphy.com/media/CRNx7WgCoZfAQ/giphy.gif)
 
 ## Perfeito!
 A nossa tradução já está funcionando. Se você abrir o site agora, verá que o conteúdo carrega no idioma padrão:
@@ -363,6 +369,8 @@ function changeLanguage(locale) {
 ```
 # Pronto (de verdade)!
 
+![](https://media.giphy.com/media/fKBh0mt02CypW/giphy.gif)
+
 Viu como é fácil fazer um site multi-idiomas com Angular1?
 
 Você deve estar agora se perguntando algumas coisas como:
@@ -387,6 +395,8 @@ Para carregar o idioma padrão eu fiz um comentário no código do index.js, bas
 Site oficial do angular-translate: https://angular-translate.github.io/
 Documentação oficial: https://angular-translate.github.io/docs/#/guide/02_getting-started
 Outro tutorial gringo com abordagem diferente: https://scotch.io/tutorials/internationalization-of-angularjs-applications
+
+![](https://media.giphy.com/media/kbyqTFFUh07NS/giphy.gif)
 
 # Dica de última hora
 
@@ -482,3 +492,5 @@ Você também pode ver a aplicação funcionando aqui: [clique aqui](http://0e1d
 Observação: a aplicação foi gerada usando `gulp dist` do FountainJS. Tudo comprimido e perfeitamente bem acabado para o ambiente de produção! :-)
 
 Muuuuuuuuuuito obrigado se você leu até aqui. :-D
+
+![](https://media.giphy.com/media/R9ewQ8bnxOUjC/giphy.gif)
