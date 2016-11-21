@@ -58,3 +58,29 @@ Antes de qualquer coisa, iremos precisar de...
 5) Guarde o **Client ID** e  o **Secret**. Precisa clicar em *Show* para ver o Secret Key.
 
 Com nosso token em mãos, vamos seguir para o próximo tópico...
+
+# Instalando SDK
+
+Para este tópico, iremos trabalhar com o [Composer](https://getcomposer.org/). Tem como instalar sem ele, mas se você ainda não usa o Composer em pleno 2016, desista agora da nossa carreira.
+
+![](3.png)
+
+**1)** Crie uma pasta para nosso projeto;
+
+`mkdir pagamentos-recorrentes-com-paypal`
+
+**2)** Dentro desta pasta, inicialize o repositório Git;
+
+`git init`
+
+**3)** Agora, inicialize o Composer;
+
+`composer init`
+
+**3.1)** Confirme as informações apertando enter, quando ele perguntar a respeito das Dependências responda "no" para tudo.
+
+**4)** Agora, vamos adicionar a SDK do PayPal como dependência: 
+
+`composer require "paypal/rest-api-sdk-php:*"`
+
+Esta etapa pode demorar alguns minutos.
