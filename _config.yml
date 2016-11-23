@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://0e1dev.com
-root: /blog/
+url: http://blog.0e1dev.com
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -68,4 +68,11 @@ theme: clean
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: rsync
+  host: 0e1dev.com
+  user: root
+  root: '/home/lhas/public_html/clients/blog'
+  port: 22
+  delete: true
+  verbose: true
+  ignore_errors: false

@@ -3,13 +3,12 @@
 <%
     var cover = item.cover || theme.index_cover;
 %>
-<header class="intro-header" style="background-image: url('<%- cover %>'); position: relative;">
-    <span class="mask" style="position: absolute; left; 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8);"></span>
+<header class="intro-header" style="background-image: url('<%- cover %>'); position: relative; height: 100vh;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
+                    <h1 style="float: left; padding: 10px; background: rgba(0,0,0,0.5);"><%- item.title || theme.default_post_title || "Untitled" %></h1>
                     <% if (item.subtitle && item.subtitle.length) { %>
                     <h2 class="post-subheading">
                         <%- item.subtitle %>
