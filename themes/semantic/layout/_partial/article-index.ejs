@@ -1,0 +1,25 @@
+<div class="post-preview">
+    <a href="<%- config.root %><%- item.path %>">
+
+        <% if (item.cover) { %>
+            <img style="width: 100%;" src="<%- config.root %><%- item.path %><%- item.cover %>" />
+        <% } %>
+
+        <h2 class="post-title">
+            <%- item.title || theme.default_post_title || "Untitled" %>
+        </h2>
+        <% if (item.subtitle && item.subtitle.length) { %>
+            <h3 class="post-subtitle">
+                <%- item.subtitle %>
+            </h3>
+        <% } %>
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        <% if(item.author) { %>
+            Postado por <%- item.author %> em
+        <% } %>
+        <%= item.date.format(config.date_format) %>
+    </p>
+</div>
+<hr>
