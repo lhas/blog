@@ -1,34 +1,58 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="<%- config.root %>"><%- theme.menu_title || config.title || "" %></a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <% for (var i in theme.menu){ %>
-                    <li>
-                        <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">
-                            <% if (theme.menu[i].icon) { %>
-                                <i class="fa fa-<%= theme.menu[i].icon %> fa-stack-2x"></i>
-                            <% } else { %>
-                                <%= i %>
-                            <% } %>
-                        </a>
-                    </li>
-                <% } %>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+<nav class="nav has-shadow">
+  <div class="nav-left">
+    <a class="logo nav-item">
+      0e1dev
+    </a>
+  </div>
+
+  <div class="nav-center">
+    <a class="nav-item" href="https://www.linkedin.com/in/luizhrqas">
+      <span class="button is-info is-outlined">
+        <span class="icon">
+          <i class="fa fa-linkedin"></i>
+        </span>
+      </span>
+    </a>
+    <a class="nav-item" href="https://github.com/lhas">
+      <span class="button is-danger is-outlined">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </span>
+    </a>
+    <a class="nav-item" href="https://www.facebook.com/lhas666">
+      <span class="button is-primary is-outlined">
+        <span class="icon">
+          <i class="fa fa-facebook"></i>
+        </span>
+      </span>
+    </a>
+  </div>
+
+  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+  <span class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+
+  <!-- This "nav-menu" is hidden on mobile -->
+  <!-- Add the modifier "is-active" to display it on mobile -->
+  <div class="nav-right nav-menu">
+    <a class="nav-item">
+      Home
+    </a>
+
+    <span class="nav-item">
+      <a class="button is-primary">
+        <span class="icon">
+          <i class="fa fa-envelope"></i>
+        </span>
+        <span>Contato</span>
+      </a>
+    </span>
+  </div>
 </nav>
