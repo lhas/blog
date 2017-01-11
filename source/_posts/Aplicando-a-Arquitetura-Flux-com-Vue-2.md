@@ -2,6 +2,8 @@
 title: Aplicando a Arquitetura Flux com Vue 2
 date: 2017-01-10 22:46:07
 tags: ['flux', 'vuex', 'vue']
+cover: cover.png
+share_cover: /2017/01/10/Aplicando-a-Arquitetura-Flux-com-Vue-2/cover.png
 ---
 
 # Introdução
@@ -21,6 +23,8 @@ Caso você queira conhecer os outros posts desta série de Vue 2:
 - [Montando CRUD com Vue 2](http://blog.0e1dev.com/2017/01/07/Montando-CRUD-com-Vue-2/)
 
 # O que é Flux?
+
+![](https://media.giphy.com/media/3o6wrdG8vt4X86Pauc/giphy.gif)
 
 É um modelo de arquitetura para User Interfaces que mantém um fluxo de dados uni-direcional.
 
@@ -178,6 +182,8 @@ Isto garante que cada modificação no estado da aplicação seja traçável e n
 
 ### Exemplo de Store
 
+![](https://media.giphy.com/media/jog2TsnJMXqX6/giphy.gif)
+
 Eu vou re-aproveitar o exemplo da própria documentação do Vuex pois acho ela muito boa para dar uma visão do que ocorre por baixo dos panos:
 
 Dado a seguinte store:
@@ -303,6 +309,8 @@ Vamos começar com um módulo simples, que será o de **Alertas**.
 
 ## Módulo de Alertas
 
+![](https://media.giphy.com/media/11nAv843yJ4Flm/giphy.gif)
+
 Este módulo será muito simples, ele apenas mostrará informações para nossos usuários com um `alert()`.
 
 Para isto, vamos precisar de uma pasta para este módulo:
@@ -377,6 +385,8 @@ export const ALERTS_DISPLAY = 'ALERTS_DISPLAY'
 No caso do nosso módulo de Alertas, ficou faltando somente as **Mutations**.
 
 # O que são Mutations?
+
+![](https://media.giphy.com/media/zpoDwr92f7UJ2/giphy.gif)
 
 As mutações são a única forma que você tem para modificar os dados do **State**.
 
@@ -487,6 +497,8 @@ export default state
 ```
 
 ## Getters de Lessons
+
+![](https://media.giphy.com/media/AlRP5F1t3nLry/giphy.gif)
 
 Existe duas formas de você recuperar os dados do **State**:
 
@@ -599,6 +611,8 @@ Junto com nosso **commit**, enviamos no **payload** todas as aulas que nós quer
 Os outros casos como deleteOne(), createOne() e updateOne(), não precisamos efetuar commits, pois estes não afetarão diretamente nosso **State**. Mais a frente você entenderá o por quê.
 
 **Pronto!** Toda a implementação necessária quanto a arquitetura já foi feita.
+
+![](https://media.giphy.com/media/3otPon0xX7E4KWwVlC/giphy.gif)
 
 Agora podemos usufruir da mesma na nossa **View**.
 
@@ -740,6 +754,8 @@ handleDelete (lesson) {
 }
 ```
 
+![](https://media.giphy.com/media/Unhhb0W1IaDHG/giphy.gif)
+
 Mesmo sem conhecer previamente o resto do código, ao você ler o código do **Depois**, fica muito claro o que está acontecendo:
 
 - Despacha uma ação para deletar a aula selecionada;
@@ -763,3 +779,8 @@ Esta é a vantagem de se utilizar um **design pattern**: Você resolve problemas
 Espero que este artigo ajude os mais novatos a entender este assunto tão complexo mas que depois que você absorve, percebe a beleza e simplicidade que tem por trás do mesmo.
 
 ## Obrigado por ler até aqui! :-)
+
+#### Referências
+- [https://vuejs.org/v2/guide/](https://vuejs.org/v2/guide/)
+- [https://vuex.vuejs.org/en/](https://vuex.vuejs.org/en/)
+- [https://facebook.github.io/flux/](https://facebook.github.io/flux/)
