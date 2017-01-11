@@ -1,31 +1,54 @@
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<div class="container">
 
-<!--
-<header class="intro-header" style="background-image: url('<%- theme.index_cover %>')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1><%- config.title %></h1>
-                    <hr class="small">
-                    <span class="subheading"><%- config.subtitle %></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>-->
-
-<!-- Main Content -->
-<!--<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <% page.posts.each(function(item){ %>
-                <%- partial('_partial/article-index', {item: item}) %>
-            <% }); %>
-
-            <%- partial('_partial/pagination') %>
-        </div>
-    </div>
+  <div class="tile is-ancestor">
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Hello World</p>
+      <p class="subtitle">What is up?</p>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Hello World</p>
+      <p class="subtitle">What is up?</p>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Hello World</p>
+      <p class="subtitle">What is up?</p>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">Hello World</p>
+      <p class="subtitle">What is up?</p>
+    </article>
+  </div>
 </div>
--->
+
+  <div class="tile is-ancestor is-multiline">
+    <% page.posts.each(function(item){ %>
+      <div class="tile is-vertical is-8">
+        <div class="card">
+
+          <% if (item.cover) { %>
+          <div class="card-image">
+            <img style="width: 100%;" src="<%- config.root %><%- item.path %><%- item.cover %>" />
+          </div>
+          <% } %>
+
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title"><%- item.title || theme.default_post_title || "Untitled" %></p>
+              </div>
+            </div> <!-- .media -->
+          </div> <!-- .card-content -->
+
+        </div> <!-- .card -->
+      </div> <!-- .card -->
+    <% }); %>
+  </div>
+
+</div>
